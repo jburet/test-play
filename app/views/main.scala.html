@@ -32,13 +32,10 @@
             </div>
             <div class="nav-collapse">
                 <ul class="nav">
-                    @if("home".equals(currentPage)){
-                        <li class="active"><a href="#">Home</a></li>
-                    }else{
-                        <li><a href="#">Home</a></li>
-                    }
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class=@if("home".equals(currentPage)) {"active"}><a href="/home">Home</a></li>
+                    <li class=@if("vfile".equals(currentPage)) {"active"}><a href="/view">View file</a></li>
+                    <li class=@if("query".equals(currentPage)) {"active"}><a href="/query">Query</a></li>
+                    <li class=@if("monitoring".equals(currentPage)) {"active"}><a href="/monitoring">Monitoring</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
